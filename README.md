@@ -1,4 +1,4 @@
-# react-native-swipeable-tabs
+# react-native-animated-tabs
 A simple component that makes tabs animatable.
 
 **Demo**
@@ -10,14 +10,14 @@ Works on both IOS and Android.
 **Installation**
 
 Just run
-npm install --save-exact react-native-swipeable-tabs
+npm install --save-exact react-native-animated-tabs
 
 **Usage**
 
 Let us suppose there are some screens **"Favourites", "Playlists", "Tracks", "Folders"**
 
 ```typescript
-import SwipeableTabs from "react-native-swipeable-tabs"
+import SwipeableTabs from "react-native-animated-tabs"
 
 class Home extends React.Component<any, any>{
 

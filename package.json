@@ -1,5 +1,5 @@
 {
-  "name": "react-native-swipeable-tabs",
+  "name": "react-native-animated-tabs",
   "version": "1.0.0",
   "description": "A simple component that makes tabs animatable.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/curtx/react-native-swipeable-tabs.git"
+    "url": "git+https://github.com/curtx/react-native-animated-tabs.git"
   },
   "keywords": [
     "react-native",
@@ -22,7 +22,7 @@
   "author": "Sheharyar Shahid",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/curtx/react-native-swipeable-tabs/issues"
+    "url": "https://github.com/curtx/react-native-animated-tabs/issues"
   },
-  "homepage": "https://github.com/curtx/react-native-swipeable-tabs#readme"
+  "homepage": "https://github.com/curtx/react-native-animated-tabs#readme"
 }

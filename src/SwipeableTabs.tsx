@@ -15,13 +15,13 @@ interface IProps {
     children?: any
 }
 const { width } = Dimensions.get("screen")
-const animated = new Animated.Value(-width)
+const animated = new Animated.Value(0)
 var startPageX = 0
 
 export default function SwipeableTabs(props: IProps) {
     var selectedIndex = 0;
     let { children, onSwipe } = props
-    if (typeof children == "object")
+    if (children && !children.length)
     children=[children]
     const Tabs = children || []
 

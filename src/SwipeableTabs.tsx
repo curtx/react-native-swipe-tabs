@@ -46,12 +46,14 @@ export default function SwipeableTabs(props: IProps) {
         let offset = startPageX - e.nativeEvent.pageX
         selectedIndex = Math.max(0, Math.min(Tabs.length - 1, Math.round(offset / width)))
         let direction=isRTL ? 1:-1
+        if (offset >= 0 && offset < width * (Tabs.length - 1)){
         Animated.timing(animated, {
             toValue: direction*selectedIndex * width,
             duration: 0,
             useNativeDriver: true,
         }).start()
         onSwipe(selectedIndex)
+        }
     }
 
     useEffect(() => {

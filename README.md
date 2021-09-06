@@ -18,7 +18,7 @@ Let us suppose there are some screens **"Favourites", "Playlists", "Tracks", "Fo
 
 ```tsx
 import SwipeableTabs from "react-native-swipe-tabs"
-
+....
 class Home extends React.Component<any, any>{
 
     constructor(props: any) {

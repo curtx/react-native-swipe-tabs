@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Animated, Dimensions, GestureResponderEvent, StyleSheet, View } from "react-native";
+import { Animated, Dimensions, GestureResponderEvent, StyleSheet, View, I18nManager} from "react-native";
 
 interface IProps {
    /**  When a swipe is completed onSwipe is called with selected index.
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     body: {
         width: "100%",
         height: "100%",
-        flexDirection: "row",
+        flexDirection:  I18nManager.isRTL ? "row-reverse":"row",
     },
     tab: {
         width,

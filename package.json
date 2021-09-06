@@ -1,6 +1,6 @@
 {
   "name": "react-native-swipe-tabs",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A simple component that makes tabs animatable.",
   "main": "index.ts",
   "scripts": {

@@ -16,7 +16,7 @@ npm install --save-exact react-native-swipe-tabs
 
 Let us suppose there are some screens **"Favourites", "Playlists", "Tracks", "Folders"**
 
-```typescript
+```tsx
 import SwipeableTabs from "react-native-swipe-tabs"
 
 class Home extends React.Component<any, any>{
@@ -29,16 +29,16 @@ class Home extends React.Component<any, any>{
     }
     
     render() {
-        return (
-            <SwipeableTabs
+     return (<SwipeableTabs
                 onSwipe={x => this.setState({ selectedIndex: x })}
-                selectedIndex={this.state.selection}
-            >
+                selectedIndex={this.state.selectedIndex}>
+                
                 <Favourites />
                 <Playlists/>
                 <Tracks/>
                 <Folders/>
-            </SwipeableTabs>)
+                
+             </SwipeableTabs>)
     }
 }
 ```

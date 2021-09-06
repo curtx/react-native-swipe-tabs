@@ -24,6 +24,7 @@ export default function SwipeableTabs(props: IProps) {
     if (children && !children.length)
     children=[children]
     const Tabs = children || []
+    const {isRTL} = I18nManager.isRTL
 
     function onTouchStart(e:GestureResponderEvent) {
         startPageX = selectedIndex * width + e.nativeEvent.pageX
@@ -31,19 +32,22 @@ export default function SwipeableTabs(props: IProps) {
 
     function onTouchMove(e:GestureResponderEvent) {
         let offset = startPageX - e.nativeEvent.pageX
-        if (offset >= 0 && offset < width * (Tabs.length - 1))
+        if (offset >= 0 && offset < width * (Tabs.length - 1)){
+            let direction=isRTL ? 1:-1
             Animated.timing(animated, {
-                toValue: -offset,
+                toValue: direction * offset,
                 duration: 0,
                 useNativeDriver: true,
             }).start()
+        }
     }
 
     function onTouchEnd(e:GestureResponderEvent) {
         let offset = startPageX - e.nativeEvent.pageX
         selectedIndex = Math.max(0, Math.min(Tabs.length - 1, Math.round(offset / width)))
+        let direction=isRTL ? 1:-1
         Animated.timing(animated, {
-            toValue: -selectedIndex * width,
+            toValue: direction*selectedIndex * width,
             duration: 0,
             useNativeDriver: true,
         }).start()
@@ -53,8 +57,9 @@ export default function SwipeableTabs(props: IProps) {
     useEffect(() => {
         if (props.selectedIndex != undefined) {
             selectedIndex = props.selectedIndex
+            let direction=isRTL ? 1:-1
             Animated.timing(animated, {
-                toValue: -props.selectedIndex * width,
+                toValue:direction* props.selectedIndex * width,
                 duration: 500,
                 useNativeDriver: true,
             }).start()
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
     body: {
         width: "100%",
         height: "100%",
-        flexDirection:  I18nManager.isRTL ? "row-reverse":"row",
+        flexDirection: "row",
     },
     tab: {
         width,

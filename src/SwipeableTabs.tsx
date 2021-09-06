@@ -24,7 +24,7 @@ export default function SwipeableTabs(props: IProps) {
     if (children && !children.length)
     children=[children]
     const Tabs = children || []
-    const {isRTL} = I18nManager.isRTL
+    const {isRTL} = I18nManager
 
     function onTouchStart(e:GestureResponderEvent) {
         startPageX = selectedIndex * width + e.nativeEvent.pageX

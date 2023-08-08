@@ -25,6 +25,11 @@ interface IProps {
    * Pass the labels you want to display in TabBar
    */
   labels?: Array<string>;
+  /**
+   * If you want to display your own label components use this. 
+   */
+  labelComponents?:Array< React.FC<{selected:boolean,label:string}>>
+
 }
 const { width } = Dimensions.get("screen");
 const animated = new Animated.Value(0);
@@ -33,7 +38,7 @@ var startPageX = 0;
 export default function SwipeableTabs(props: IProps) {
   var selectedIndex = 0;
 
-  let { children, onSwipe, labels } = props;
+  let { children, onSwipe, labels,labelComponents } = props;
   onSwipe = onSwipe || (() => {});
   if (children && !children.length) children = [children];
 
@@ -114,6 +119,7 @@ export default function SwipeableTabs(props: IProps) {
           labels={labels}
           tabCount={Tabs.length}
           selectedIndex={selectedIndex}
+          labelComponents={labelComponents}
           onPress={(i) => setTimeout(() => triggerSelection(i), 0)}
         />
       )}
@@ -145,6 +151,7 @@ export interface ITabProps {
   selectedIndex: number;
   tabCount: number;
   onPress?: (index: number) => void;
+  labelComponents?:Array< React.FC<{selected:boolean,label:string}> >
 }
 
 class TabStateWrapper extends React.Component<

@@ -3,7 +3,7 @@ A simple component that makes tabs animatable.
 
 **Introducing new Version with Labels**
 
-Works on both IOS and Android. Click <a href="https://asteromite.com/quickdemo" target="_blank" >here</a> to see it in action.
+Works on both IOS and Android. Click <a href="https://shahid-sheharyar.web.app/quickdemo" target="_blank" >here</a> to see it in action.
 
 <img  height="500" alt="Screenshot 2022-08-08 at 5 04 21 PM" src="https://user-images.githubusercontent.com/89903475/183413912-2ef538a6-4e42-4cdf-8c1d-6029ce304703.png"> <img src="https://user-images.githubusercontent.com/89903475/132087155-d333b88d-71b5-4bf3-af84-ecfcc7d477ca.gif" height="500">    <img  src="https://user-images.githubusercontent.com/89903475/132087166-90a98d24-8379-4ba2-b45b-64e57ad1ab64.gif" height="500">
 
